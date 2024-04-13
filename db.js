@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 3001;
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'tu_usuario',
-    password: 'tu_contraseña',
-    database: 'nombre_de_tu_base_de_datos'
+    user: 'dateswufwuf',
+    password: 'eggshell123',
+    database: 'appointment-schedule-db'
 });
 
 db.connect((err) => {
@@ -32,7 +32,7 @@ app.post('/api/appointments/schedule', (req, res) => {
             console.error('Error al programar la cita:', err);
             res.status(500).json({ error: 'Error al programar la cita' });
         } else {
-            console.log('Cita programada exitosamente');
+            console.log('Cita programada exitosamente, ¡Te esperamos!');
             res.status(200).json({ message: 'Cita programada exitosamente' });
         }
     });
