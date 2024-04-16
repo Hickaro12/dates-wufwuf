@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const appointmentsRouter = require('./src/controllers/appointments');
+const appointmentsRouter = require('./src/routes/appointments');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

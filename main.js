@@ -9,6 +9,6 @@ app.use(express.json());
 app.use('/api/appointments', appointmentsRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Servidor Express en funcionamiento en el puerto ${PORT}`);
+    console.log(`puerto ${PORT}`);
 });
 
