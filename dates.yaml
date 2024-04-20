@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dates-backend-pod
+  labels:
+    name: dates-backend-pod
+    app: dates
+spec:
+  containers:
+    - name: dates-backend-container
+      image: amaranth0x/wufwuf_dates:latest
+      ports:
+        - containerPort: 8001
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dates-backend-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8001
+      protocol: TCP
+  selector:
+    app: dates

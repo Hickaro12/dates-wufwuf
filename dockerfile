@@ -4,8 +4,12 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
-COPY . .
+COPY ./main.js ./
 
-EXPOSE 3000
+RUN npm init -y
+RUN npm install express
+
+EXPOSE 8001
 
 CMD ["node", "main.js"]
+
